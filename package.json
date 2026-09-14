@@ -1,0 +1,1 @@
+{"name":"nfl-picks-2026","private":true,"version":"1.0.0","type":"module","scripts":{"build":"mkdir -p dist && cp index.html styles.css app.js dist/","check":"node --check app.js && tsc --noEmit --target ES2022 --moduleResolution bundler --module preserve netlify/functions/sync.mts"},"devDependencies":{"@netlify/functions":"latest","typescript":"latest"}}

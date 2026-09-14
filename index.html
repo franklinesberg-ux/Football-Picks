@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#08111f" />
+  <title>The Playoff Pickoff · 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="topbar">
+    <a class="brand" href="#dashboard" aria-label="The Playoff Pickoff home">
+      <span class="brand-mark">26</span><span><b>THE PLAYOFF</b><em>PICKOFF</em></span>
+    </a>
+    <nav aria-label="Primary">
+      <button data-route="dashboard" class="active">Dashboard</button>
+      <button data-route="picks">Picks</button>
+      <button data-route="standings">NFL Standings</button>
+    </nav>
+    <div class="season-pill"><span class="live-dot"></span> 2026 SEASON</div>
+  </header>
+
+  <main>
+    <section id="dashboard" class="view active">
+      <div class="hero">
+        <div><p class="eyebrow">THE ROAD TO SUPER BOWL LXI</p><h1>Make the call.<br><span>Own the season.</span></h1><p class="lede">Three players. Thirty-two teams. One season-long prediction battle.</p></div>
+        <div class="hero-meta"><div><small>STATUS</small><strong id="season-status">PRESEASON</strong></div><div><small>LAST UPDATE</small><strong id="last-update">Waiting for data</strong></div></div>
+      </div>
+      <section class="section-block">
+        <div class="section-head"><div><p class="eyebrow">PROJECTED IF THE SEASON ENDED TODAY</p><h2>Leaderboard</h2></div><button class="ghost" id="refresh-btn">Refresh standings</button></div>
+        <div id="leaderboard" class="leaderboard loading-card">Loading the competition…</div>
+      </section>
+      <section class="grid-two">
+        <div class="panel"><div class="panel-head"><div><p class="eyebrow">CURRENT PLAYOFF PICTURE</p><h2>In the field</h2></div><button class="text-btn" data-route="standings">Full standings →</button></div><div id="playoff-picture" class="playoff-grid"></div></div>
+        <div class="panel"><p class="eyebrow">HOW POINTS WORK</p><h2>Scoring key</h2><div class="rules"><div><b>3</b><span>Division winner<br><small>1 pt if wrong playoff slot</small></span></div><div><b>3</b><span>Wild card<br><small>1 pt if division winner</small></span></div><div><b>3</b><span>Conference finalist<br><small>per correct team</small></span></div><div><b>5</b><span>Super Bowl team<br><small>per correct team</small></span></div><div><b>5</b><span>Super Bowl champion<br><small>winner bonus</small></span></div></div></div>
+      </section>
+    </section>
+
+    <section id="picks" class="view">
+      <div class="page-title"><p class="eyebrow">THE THREE CONTENDERS</p><h1>Season picks</h1><p>Open a player card to enter or review every prediction.</p></div>
+      <div id="player-cards" class="player-cards"></div>
+    </section>
+
+    <section id="standings" class="view">
+      <div class="page-title standings-title"><div><p class="eyebrow">LIVE PLAYOFF RACE</p><h1>NFL standings</h1><p id="standings-note">Updated after completed games.</p></div><button class="ghost" id="refresh-btn-2">Refresh standings</button></div>
+      <div class="conference-toggle"><button class="active" data-conf="AFC">AFC</button><button data-conf="NFC">NFC</button></div>
+      <div id="standings-grid" class="standings-grid"></div>
+    </section>
+  </main>
+
+  <div id="editor" class="modal" aria-hidden="true"><div class="modal-backdrop" data-close></div><div class="modal-sheet" role="dialog" aria-modal="true" aria-labelledby="editor-title"><button class="modal-close" data-close aria-label="Close">×</button><div id="editor-content"></div></div></div>
+  <div id="toast" class="toast" role="status"></div>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
