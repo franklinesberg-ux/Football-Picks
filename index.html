@@ -27,12 +27,22 @@
   <main>
     <section id="dashboard" class="view active">
       <div class="hero">
-        <div><p class="eyebrow">THE ROAD TO SUPER BOWL LXI</p><h1>Make the call.<br><span>Own the season.</span></h1><p class="lede">Three players. Thirty-two teams. One season-long prediction battle.</p></div>
+        <div><p class="eyebrow">THE ROAD TO SUPER BOWL LXI</p><h1>The Dinner Bois.<br><span>Earn a Dinner.</span></h1><p class="lede">Three players. Thirty-two teams. One season-long prediction battle.</p></div>
         <div class="hero-meta"><div><small>STATUS</small><strong id="season-status">PRESEASON</strong></div><div><small>LAST UPDATE</small><strong id="last-update">Waiting for data</strong></div></div>
       </div>
       <section class="section-block">
         <div class="section-head"><div><p class="eyebrow">PROJECTED IF THE SEASON ENDED TODAY</p><h2>Leaderboard</h2></div><button class="ghost" id="refresh-btn">Refresh standings</button></div>
         <div id="leaderboard" class="leaderboard loading-card">Loading the competition…</div>
+        <div class="picks-board-head">
+          <div><p class="eyebrow">PICK-BY-PICK PROJECTION</p><h2>Everyone’s picks</h2></div>
+          <div class="pick-status-legend" aria-label="Pick status legend">
+            <span class="legend-hit"><i></i>Projected hit</span>
+            <span class="legend-partial"><i></i>Partial points</span>
+            <span class="legend-miss"><i></i>Miss</span>
+            <span class="legend-pending"><i></i>Pending</span>
+          </div>
+        </div>
+        <div id="pick-breakdowns" class="pick-breakdowns"></div>
       </section>
       <section class="grid-two">
         <div class="panel"><div class="panel-head"><div><p class="eyebrow">CURRENT PLAYOFF PICTURE</p><h2>In the field</h2></div><button class="text-btn" data-route="standings">Full standings →</button></div><div id="playoff-picture" class="playoff-grid"></div></div>
